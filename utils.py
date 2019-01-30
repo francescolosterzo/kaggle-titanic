@@ -44,6 +44,7 @@ def getFullParameters(fit_result, x):
     
     # errors
     errors = np.sqrt(np.diag(cov))
+    #errors = np.sqrt( np.abs(np.diag(cov)) )
 
     params = np.insert(fit_result.coef_, 0, fit_result.intercept_)
     
